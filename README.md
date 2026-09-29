@@ -74,3 +74,9 @@ brew update && brew upgrade jtorrent
 ```
 
 You can also download a binary from [GitHub Releases](https://github.com/OxJacky/jtorrent-cli/releases).
+
+## Terms and policies
+
+The CLI uses the JTorrent service and is subject to its [Terms of Service](https://jtorrent.in/terms). Only submit content you have the right to access and download; you are responsible for the files you request.
+
+Read the [Privacy Policy](https://jtorrent.in/privacy) for how JTorrent handles account, connection, and download information. For copyright reports and paid-plan questions, see the [DMCA / Copyright Policy](https://jtorrent.in/dmca) and [Refund Policy](https://jtorrent.in/refund-policy). Need help? Visit [Support](https://jtorrent.in/support).
