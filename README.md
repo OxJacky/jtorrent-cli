@@ -2,7 +2,7 @@
 
 ### Your downloads, one command away.
 
-JTorrent brings the [JTorrent](https://jtorrent.in) download experience to your terminal. Give it a magnet link or a `.torrent` file, watch the progress, and get the finished file in your current directory. No local torrent-client setup required.
+JTorrent brings the [JTorrent](https://jtorrent.in) download experience to your terminal. Give it a magnet link or a `.torrent` file, watch the progress, and get the finished file in your current directory. No local torrent-client setup required. Sign in with your JTorrent account to use your plan's download speeds from the CLI.
 
 **Available for macOS and Linux · ARM64 and AMD64**
 
@@ -56,12 +56,13 @@ Run `jtorrent <command> --help` for command-specific help.
 ## Why use JTorrent CLI?
 
 - **Terminal-native workflow.** Start a download wherever you're already working, without switching apps.
+- **Speed that follows your plan.** Use your JTorrent account in the CLI to access your plan's speeds. Premium has no plan-imposed speed cap and can reach up to **350 Mbps** in favorable conditions. [Compare plans and subscriptions](https://jtorrent.in/subscriptions).
 - **No local torrent setup.** JTorrent handles the torrent stage; the CLI fetches the result to your machine.
 - **One clear progress view.** Follow the job and the final file transfer in the same terminal.
 - **Your account, if you want it.** Use the CLI as a guest or sign in to your JTorrent account.
 - **Ready for your machine.** Homebrew installation for macOS and Linux on ARM64 and AMD64.
 
-Torrent availability and transfer speeds depend on the source and your connection.
+Speeds are not guaranteed. Torrent availability, source peers, network conditions, and your connection affect the speed you actually see.
 
 ## Updates
 
