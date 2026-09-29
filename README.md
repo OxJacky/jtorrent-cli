@@ -1,20 +1,43 @@
-# JTorrent CLI
+<p align="center">
+  <img src=".github/assets/jtorrent-cli-hero.svg" alt="JTorrent CLI — your downloads, one command away" width="100%">
+</p>
 
-### Your downloads, one command away.
+<p align="center">
+  <a href="https://jtorrent.in"><img src="https://jtorrent.in/logo-64.webp" alt="JTorrent logo" width="64" height="64"></a>
+</p>
 
-JTorrent brings the [JTorrent](https://jtorrent.in) download experience to your terminal. Give it a magnet link or a `.torrent` file, watch the progress, and get the finished file in your current directory. No local torrent-client setup required. Sign in with your JTorrent account to use your plan's download speeds from the CLI.
+<h1 align="center">JTorrent CLI</h1>
 
-**Available for macOS and Linux · ARM64 and AMD64**
+<p align="center">
+  <strong>From magnet link to finished file, right from your terminal.</strong><br>
+  JTorrent handles the torrent stage in the cloud. You follow the progress and get the result on your machine.
+</p>
 
-## Get started
+<p align="center">
+  <a href="https://github.com/OxJacky/jtorrent-cli/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/OxJacky/jtorrent-cli?style=for-the-badge&amp;label=release&amp;color=9565e8"></a>
+  <a href="https://github.com/OxJacky/homebrew-tap"><img alt="Homebrew install" src="https://img.shields.io/badge/install-Homebrew-23b8c5?style=for-the-badge"></a>
+  <img alt="macOS and Linux" src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux-48547b?style=for-the-badge">
+</p>
 
-Install with Homebrew:
+<p align="center">
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#why-jtorrent-cli">Why JTorrent</a> ·
+  <a href="#commands">Commands</a> ·
+  <a href="https://jtorrent.in/subscriptions">Plans</a> ·
+  <a href="https://jtorrent.in/support">Support</a>
+</p>
+
+---
+
+## ⚡ Quick start
+
+Install on macOS or Linux (ARM64 or AMD64) with Homebrew:
 
 ```sh
 brew install OxJacky/tap/jtorrent
 ```
 
-Then start a download:
+Start a download with a magnet link or a local `.torrent` file:
 
 ```sh
 jtorrent download 'magnet:?xt=urn:btih:...'
@@ -22,24 +45,36 @@ jtorrent download 'magnet:?xt=urn:btih:...'
 jtorrent download ./example.torrent
 ```
 
-JTorrent creates a new `jtorrent-download-*` folder in the directory where you run the command and saves the completed file there. You can use the CLI without logging in, or connect your JTorrent account:
+Use the CLI as a guest, or sign in to use your JTorrent plan in the terminal:
 
 ```sh
 jtorrent login
 jtorrent whoami
 ```
 
-`login` opens a browser for approval. If it doesn't open automatically, the CLI shows a link and code to complete sign-in yourself.
+`jtorrent login` opens a browser for approval. If it doesn't open, the CLI prints a link and code so you can complete sign-in yourself.
 
-## How it works
+## ✦ Why JTorrent CLI?
 
-1. Submit a magnet link or local `.torrent` file from your terminal.
-2. JTorrent handles the torrent download in its cloud service while the CLI shows its status and progress.
-3. When it's ready, the CLI transfers the finished file to your machine and shows where it was saved.
+| ⚡ Plan-powered speed | 🛡️ Your IP stays out of the swarm |
+| --- | --- |
+| Your JTorrent account brings its plan speeds to the CLI. Premium has no plan-imposed speed cap and can reach **up to 350 Mbps** in favorable conditions. [Explore plans →](https://jtorrent.in/subscriptions) | JTorrent's cloud service handles the torrent connection. Swarm peers see the service's IP address, not yours. Your connection to JTorrent still uses your IP address. |
+| **☁️ No local torrent setup** | **⌁ One terminal, clear progress** |
+| No separate local torrent client to configure. JTorrent handles the torrent stage and the CLI fetches your completed file. | Submit, follow the job, and watch the final transfer from the same terminal. |
+
+Speeds aren't guaranteed; torrent availability, source peers, network conditions, and your connection affect what you actually see.
+
+## ↳ How a download flows
+
+```text
+Magnet link or .torrent  →  JTorrent cloud download  →  File on your machine
+```
+
+The CLI shows the cloud job's status, then transfers the finished file into a new `jtorrent-download-*` folder in the directory where you ran the command. On completion, it prints the saved location.
 
 Keep the terminal open until the transfer finishes. Pressing Ctrl+C stops the current CLI run and removes its unfinished local file; it does not remove a previously completed download.
 
-## Commands
+## ⌘ Commands
 
 | Command | What it does |
 | --- | --- |
@@ -53,19 +88,7 @@ Keep the terminal open until the transfer finishes. Pressing Ctrl+C stops the cu
 
 Run `jtorrent <command> --help` for command-specific help.
 
-## Why use JTorrent CLI?
-
-- **Terminal-native workflow.** Start a download wherever you're already working, without switching apps.
-- **Speed that follows your plan.** Use your JTorrent account in the CLI to access your plan's speeds. Premium has no plan-imposed speed cap and can reach up to **350 Mbps** in favorable conditions. [Compare plans and subscriptions](https://jtorrent.in/subscriptions).
-- **Your IP stays out of the swarm.** JTorrent's cloud service handles the torrent connection, so swarm peers see the service's IP address rather than yours. Your connection to JTorrent still uses your IP address.
-- **No local torrent setup.** JTorrent handles the torrent stage; the CLI fetches the result to your machine.
-- **One clear progress view.** Follow the job and the final file transfer in the same terminal.
-- **Your account, if you want it.** Use the CLI as a guest or sign in to your JTorrent account.
-- **Ready for your machine.** Homebrew installation for macOS and Linux on ARM64 and AMD64.
-
-Speeds are not guaranteed. Torrent availability, source peers, network conditions, and your connection affect the speed you actually see.
-
-## Updates
+## ↗ Stay up to date
 
 The CLI checks for a newer release and can show an update notice. To install updates when you choose:
 
@@ -75,8 +98,12 @@ brew update && brew upgrade jtorrent
 
 You can also download a binary from [GitHub Releases](https://github.com/OxJacky/jtorrent-cli/releases).
 
-## Terms and policies
+## ⚖ Terms and policies
 
 The CLI uses the JTorrent service and is subject to its [Terms of Service](https://jtorrent.in/terms). Only submit content you have the right to access and download; you are responsible for the files you request.
 
 Read the [Privacy Policy](https://jtorrent.in/privacy) for how JTorrent handles account, connection, and download information. For copyright reports and paid-plan questions, see the [DMCA / Copyright Policy](https://jtorrent.in/dmca) and [Refund Policy](https://jtorrent.in/refund-policy). Need help? Visit [Support](https://jtorrent.in/support).
+
+---
+
+<p align="center"><a href="https://jtorrent.in">JTorrent</a> · <a href="https://jtorrent.in/subscriptions">Plans</a> · <a href="https://jtorrent.in/support">Support</a></p>
