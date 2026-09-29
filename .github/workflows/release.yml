@@ -1,0 +1,28 @@
+name: Publish binary release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify binary archives
+        run: |
+          cd "releases/${GITHUB_REF_NAME}"
+          sha256sum -c "SHA256SUMS_${GITHUB_REF_NAME#v}"
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          gh release create "${GITHUB_REF_NAME}" \
+            "releases/${GITHUB_REF_NAME}"/jtorrent_"${version}"_*.tar.gz \
+            "releases/${GITHUB_REF_NAME}/SHA256SUMS_${version}" \
+            --title "JTorrent ${GITHUB_REF_NAME}" --generate-notes --verify-tag
