@@ -13,8 +13,11 @@
   JTorrent handles the torrent stage in the cloud. You follow the progress and get the result on your machine.
 </p>
 
+<p align="center"><strong>Free to install and use.</strong> Paid plans offer higher speeds and queue priority. <a href="https://jtorrent.in/subscriptions">Compare plans →</a></p>
+
 <p align="center">
   <a href="https://github.com/OxJacky/jtorrent-cli/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/OxJacky/jtorrent-cli?style=for-the-badge&amp;label=release&amp;color=9565e8"></a>
+  <img alt="Free to use" src="https://img.shields.io/badge/start-free-40b89d?style=for-the-badge">
   <a href="https://github.com/OxJacky/homebrew-tap"><img alt="Homebrew install" src="https://img.shields.io/badge/install-Homebrew-23b8c5?style=for-the-badge"></a>
   <img alt="macOS and Linux" src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux-48547b?style=for-the-badge">
 </p>
@@ -45,7 +48,7 @@ jtorrent download 'magnet:?xt=urn:btih:...'
 jtorrent download ./example.torrent
 ```
 
-Use the CLI as a guest, or sign in to use your JTorrent plan in the terminal:
+No subscription is needed to get started. Use the CLI as a guest or sign in to use your JTorrent plan in the terminal:
 
 ```sh
 jtorrent login
@@ -56,9 +59,9 @@ jtorrent whoami
 
 ## ✦ Why JTorrent CLI?
 
-| ⚡ Plan-powered speed | 🛡️ Your IP stays out of the swarm |
+| ⚡ Free to start, faster with a plan | 🛡️ Your IP stays out of the swarm |
 | --- | --- |
-| Your JTorrent account brings its plan speeds to the CLI. Premium has no plan-imposed speed cap and can reach **up to 350 Mbps** in favorable conditions. [Explore plans →](https://jtorrent.in/subscriptions) | JTorrent's cloud service handles the torrent connection. Swarm peers see the service's IP address, not yours. Your connection to JTorrent still uses your IP address. |
+| Free users can download with the CLI. Paid plans add higher speed allowances and queue priority; Premium has no plan-imposed speed cap and can reach **up to 350 Mbps** in favorable conditions. [Explore plans →](https://jtorrent.in/subscriptions) | JTorrent's cloud service handles the torrent connection. Swarm peers see the service's IP address, not yours. Your connection to JTorrent still uses your IP address. |
 | **☁️ No local torrent setup** | **⌁ One terminal, clear progress** |
 | No separate local torrent client to configure. JTorrent handles the torrent stage and the CLI fetches your completed file. | Submit, follow the job, and watch the final transfer from the same terminal. |
 
