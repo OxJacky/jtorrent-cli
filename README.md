@@ -57,6 +57,7 @@ Run `jtorrent <command> --help` for command-specific help.
 
 - **Terminal-native workflow.** Start a download wherever you're already working, without switching apps.
 - **Speed that follows your plan.** Use your JTorrent account in the CLI to access your plan's speeds. Premium has no plan-imposed speed cap and can reach up to **350 Mbps** in favorable conditions. [Compare plans and subscriptions](https://jtorrent.in/subscriptions).
+- **Your IP stays out of the swarm.** JTorrent's cloud service handles the torrent connection, so swarm peers see the service's IP address rather than yours. Your connection to JTorrent still uses your IP address.
 - **No local torrent setup.** JTorrent handles the torrent stage; the CLI fetches the result to your machine.
 - **One clear progress view.** Follow the job and the final file transfer in the same terminal.
 - **Your account, if you want it.** Use the CLI as a guest or sign in to your JTorrent account.
