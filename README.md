@@ -61,7 +61,7 @@ jtorrent whoami
 
 | ⚡ Free to start, faster with a plan | 🛡️ Your IP stays out of the swarm |
 | --- | --- |
-| Free users can download with the CLI. Paid plans add higher speed allowances and queue priority; Premium has no plan-imposed speed cap and can reach **up to 350 Mbps** in favorable conditions. [Explore plans →](https://jtorrent.in/subscriptions) | JTorrent's cloud service handles the torrent connection. Swarm peers see the service's IP address, not yours. Your connection to JTorrent still uses your IP address. |
+| Free users can download with the CLI. Paid plans add higher speed allowances, queue priority, and larger torrent size caps; Premium has no size cap and no plan-imposed speed cap on server downloads, and streams torrents over 50 GB directly from the swarm. [Explore plans →](https://jtorrent.in/subscriptions) | JTorrent's cloud service handles the torrent connection. Swarm peers see the service's IP address, not yours. Your connection to JTorrent still uses your IP address. |
 | **☁️ No local torrent setup** | **⌁ One terminal, clear progress** |
 | No separate local torrent client to configure. JTorrent handles the torrent stage and the CLI fetches your completed file. | Submit, follow the job, and watch the final transfer from the same terminal. |
 
