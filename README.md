@@ -1,8 +1,4 @@
 <p align="center">
-  <img src=".github/assets/jtorrent-cli-hero.svg" alt="JTorrent CLI — your downloads, one command away" width="100%">
-</p>
-
-<p align="center">
   <a href="https://jtorrent.in"><img src="https://jtorrent.in/logo-64.webp" alt="JTorrent logo" width="64" height="64"></a>
 </p>
 
