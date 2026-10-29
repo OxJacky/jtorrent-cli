@@ -1,6 +1,6 @@
 Premium downloads can now use available Ethernet, Wi-Fi and USB tethering connections together on Linux and macOS. Reachable connections are discovered automatically, with failover and recovery when a connection drops or returns.
 
-- Adaptive parallel downloads for completed files delivered from R2 and Google Drive.
+- Adaptive parallel downloads for completed files delivered from JTorrent servers.
 - A terminal-size-aware progress display with per-connection speeds and downloaded bytes, plus final transfer time and average speed.
 - Use `--single-network` to keep downloads on the system’s default connection. Automatic mode may use mobile data and physical connections outside a VPN.
 

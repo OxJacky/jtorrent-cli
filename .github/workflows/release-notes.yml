@@ -1,0 +1,28 @@
+name: Update published release notes
+
+on:
+  push:
+    branches: [main]
+    paths: ['releases/*/NOTES.md']
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Sync changed notes to GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git diff --name-only HEAD^ HEAD -- 'releases/*/NOTES.md' | while IFS= read -r notes; do
+            test -f "$notes" || continue
+            tag="${notes#releases/}"
+            tag="${tag%/NOTES.md}"
+            [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || exit 1
+            gh release edit "$tag" --notes-file "$notes"
+          done
