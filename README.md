@@ -77,6 +77,18 @@ The CLI shows the cloud job's status, then transfers the finished file into a ne
 
 Keep the terminal open until the transfer finishes. Pressing Ctrl+C stops the current CLI run and removes its unfinished local file; it does not remove a previously completed download.
 
+## Multiple connections with Premium
+
+Premium completed-file downloads automatically combine reachable Ethernet, Wi-Fi and USB tethering connections on Linux and macOS. The display shows each connection’s speed and downloaded bytes, with automatic failover and recovery. Independent internet connections can increase total throughput; connections sharing one uplink still share its capacity.
+
+Automatic mode may use mobile data and physical interfaces outside a VPN. To use your normal system route instead:
+
+```sh
+jtorrent download --single-network 'magnet:?xt=urn:btih:...'
+```
+
+Live direct-stream downloads retain their existing behavior.
+
 ## ⌘ Commands
 
 | Command | What it does |

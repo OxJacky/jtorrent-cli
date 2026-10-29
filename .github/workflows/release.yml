@@ -25,4 +25,4 @@ jobs:
           gh release create "${GITHUB_REF_NAME}" \
             "releases/${GITHUB_REF_NAME}"/jtorrent_"${version}"_*.tar.gz \
             "releases/${GITHUB_REF_NAME}/SHA256SUMS_${version}" \
-            --title "JTorrent ${GITHUB_REF_NAME}" --generate-notes --verify-tag
+            --title "JTorrent ${GITHUB_REF_NAME}" --notes-file "releases/${GITHUB_REF_NAME}/NOTES.md" --verify-tag
