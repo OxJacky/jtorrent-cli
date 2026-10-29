@@ -19,7 +19,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git diff --name-only HEAD^ HEAD -- 'releases/*/NOTES.md' | while IFS= read -r notes; do
+          git diff --diff-filter=M --name-only HEAD^ HEAD -- 'releases/*/NOTES.md' | while IFS= read -r notes; do
             test -f "$notes" || continue
             tag="${notes#releases/}"
             tag="${tag%/NOTES.md}"
