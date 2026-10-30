@@ -93,7 +93,7 @@ jtorrent download --single-network 'magnet:?xt=urn:btih:...'
 
 Live direct-stream downloads retain their existing behavior.
 
-The multi-connection download implementation is adapted from [Plexo](https://github.com/anmolkapil/plexo), an open-source download manager by Anmol Kapil, under the MIT License. See `THIRD-PARTY-NOTICES.txt` for its copyright and license notice.
+The multi-connection download implementation is adapted from [Plexo](https://github.com/anmolkapil/plexo), an open-source download manager by Anmol Kapil, under the MIT License.
 
 ## ⌘ Commands
 
