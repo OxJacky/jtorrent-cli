@@ -15,7 +15,7 @@
   <a href="https://github.com/OxJacky/jtorrent-cli/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/OxJacky/jtorrent-cli?style=for-the-badge&amp;label=release&amp;color=9565e8"></a>
   <img alt="Free to use" src="https://img.shields.io/badge/start-free-40b89d?style=for-the-badge">
   <a href="https://github.com/OxJacky/homebrew-tap"><img alt="Homebrew install" src="https://img.shields.io/badge/install-Homebrew-23b8c5?style=for-the-badge"></a>
-  <img alt="macOS and Linux" src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux-48547b?style=for-the-badge">
+  <img alt="macOS and Linux" src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-48547b?style=for-the-badge">
 </p>
 
 <p align="center">
@@ -35,6 +35,14 @@ Install on macOS or Linux (ARM64 or AMD64) with Homebrew:
 ```sh
 brew install OxJacky/tap/jtorrent
 ```
+
+Install on Windows (AMD64 or ARM64) in PowerShell, without administrator privileges:
+
+```powershell
+irm https://jtorrent.in/install.ps1 | iex
+```
+
+The installer verifies SHA-256 checksums, installs to `%LOCALAPPDATA%\Programs\JTorrent`, and adds it to your user PATH.
 
 Start a download with a magnet link or a local `.torrent` file:
 
@@ -75,7 +83,7 @@ Keep the terminal open until the transfer finishes. Pressing Ctrl+C stops the cu
 
 ## Multiple connections with Premium
 
-Premium completed-file downloads automatically combine reachable Ethernet, Wi-Fi and USB tethering connections on Linux and macOS. The display shows each connection’s speed and downloaded bytes, with automatic failover and recovery. Independent internet connections can increase total throughput; connections sharing one uplink still share its capacity.
+Premium completed-file downloads automatically combine reachable Ethernet, Wi-Fi and USB tethering connections on Windows, Linux and macOS. The display shows each connection’s speed and downloaded bytes, with automatic failover and recovery. Independent internet connections can increase total throughput; connections sharing one uplink still share its capacity.
 
 Automatic mode may use mobile data and physical interfaces outside a VPN. To use your normal system route instead:
 
@@ -95,7 +103,8 @@ The multi-connection download implementation is adapted from [Plexo](https://git
 | `jtorrent login` | Connect your JTorrent account through your browser. |
 | `jtorrent logout` | Sign out on this machine. |
 | `jtorrent whoami` | Show the signed-in account and tier. |
-| `jtorrent --version` | Show the installed version. |
+| `jtorrent version` or `jtorrent --version` | Show the installed version. |
+| `jtorrent update` | Verify and install the latest stable release, or show your package manager’s update command. |
 | `jtorrent help` | Explore commands and options. |
 | `jtorrent completion <shell>` | Generate shell-completion instructions. |
 
@@ -103,13 +112,40 @@ Run `jtorrent <command> --help` for command-specific help.
 
 ## ↗ Stay up to date
 
-The CLI checks for a newer release and can show an update notice. To install updates when you choose:
+The CLI checks for updates during ordinary commands, at most once per day. It prints a notice when a newer stable release is available; it does not install automatically.
+
+For Windows installer and direct binary installations on all supported platforms:
+
+```sh
+jtorrent update
+jtorrent version
+```
+
+Updates verify SHA-256 checksums and preserve account settings and downloads. Windows finishes replacing the executable after the command exits. Failed replacements restore the previous executable; interrupted updates can be recovered by running `jtorrent update` again.
+
+Homebrew installations use:
 
 ```sh
 brew update && brew upgrade jtorrent
 ```
 
-You can also download a binary from [GitHub Releases](https://github.com/OxJacky/jtorrent-cli/releases).
+Package-managed files are never overwritten by the self-updater. You can also download binaries from [GitHub Releases](https://github.com/OxJacky/jtorrent-cli/releases).
+
+## Uninstall
+
+Windows:
+
+```powershell
+irm https://jtorrent.in/uninstall.ps1 | iex
+```
+
+macOS/Linux with Homebrew:
+
+```sh
+brew uninstall jtorrent
+```
+
+For a direct binary installation, remove the binary you installed. Uninstallation preserves account settings and downloaded files.
 
 ## ⚖ Terms and policies
 
