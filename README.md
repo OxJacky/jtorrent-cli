@@ -77,7 +77,7 @@ Speeds aren't guaranteed; torrent availability, source peers, network conditions
 Magnet link or .torrent  →  JTorrent cloud download  →  File on your machine
 ```
 
-The CLI shows the cloud job's status, then transfers the finished file into a new `jtorrent-download-*` folder in the directory where you ran the command. On completion, it prints the saved location.
+The CLI shows the cloud job's status, then transfers the finished file into a new folder named after the file, in the directory where you ran the command. It checks free disk space first. On completion, it prints the saved location.
 
 Keep the terminal open until the transfer finishes. Pressing Ctrl+C stops the current CLI run and removes its unfinished local file; it does not remove a previously completed download.
 

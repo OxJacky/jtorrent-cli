@@ -60,7 +60,7 @@
     <text x="658" y="230" fill="#c4acd9">JTorrent cloud</text>
     <text x="658" y="299" fill="#80e2cf">✓</text>
     <text x="688" y="299" fill="#e9e9fb">Download complete</text>
-    <text x="658" y="337" fill="#8e9ac0" font-size="16">./jtorrent-download-…/your-file</text>
+    <text x="658" y="337" fill="#8e9ac0" font-size="16">./your-file/your-file.mkv</text>
   </g>
   <rect x="658" y="250" width="424" height="8" rx="4" fill="#323657"/>
   <rect x="658" y="250" width="424" height="8" rx="4" fill="url(#accent)"/>
